@@ -28,3 +28,25 @@ class Window:
         self.neighboor=[]
         self/total_rows=total_rows
 
+    def self_pos(self):
+        return self.row , self.col
+    
+    def is_closed(self):
+        return self.color == RED
+    
+    def is_open(self):
+        return self.color == GREEN
+    
+    def is_barrier(self):
+        return self.color == BLACK
+    
+    def is_start(self):
+        return self.color == ORANGE
+    
+    def is_end(self):
+        return self.color == PURPLE
+    
+    def reset(self):
+        return self.color == WHITE
+    
+
