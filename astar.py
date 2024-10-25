@@ -74,6 +74,10 @@ class Window:
     def __lt__(self , other):
         return False
 
-    
-
+#Heurestic H(n) function
+# H() should return the distance between point 1 and point 2
+def H(p1 , p2):
+    x1 , y1 =p1
+    x2 , y2 = p2
+    return abs(x1 - x2) + abs(y1 - y2)
 
