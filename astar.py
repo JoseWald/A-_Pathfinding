@@ -17,7 +17,7 @@ ORANGE=(255 , 165 , 0)
 GREY=(128 , 128 , 128)
 TURQUOISE=(64 , 224 , 208)
 
-class Window:
+class Spot:
     def __init__(self , row , col , width , total_rows ):
         self.row=row
         self.col=col
@@ -81,3 +81,11 @@ def H(p1 , p2):
     x2 , y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
 
+def make_grid(rows , width):
+    grid = []
+    gap = width // rows
+    
+    for i in range(rows):
+        grid.append([])
+        for j in range(rows):
+            window= Spot(i , j ,gap , rows)
