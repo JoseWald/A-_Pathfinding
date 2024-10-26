@@ -168,7 +168,10 @@ def main(win, width):
 					end=None
 			if event == pygame.KEYDOWN:
 				if event.key == pygame.K_SPACE and not started:
-					pass
+					for row in grid :
+						for spot in row :
+							spot.update_neighbors()
+					algorithm(lambda : draw(win , grid , rows , width) , grid , start , end)
 	pygame.quit()
 
 main(WIN, WIDTH)
